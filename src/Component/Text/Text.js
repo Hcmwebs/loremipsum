@@ -6,7 +6,7 @@ const Text = ({ text }) => {
 		<>
 			{text.map((item, index) => {
 				return (
-					<article key={index}>
+					<article key={index} className='lorem-text'>
 						<p>{item}</p>
 					</article>
 				)

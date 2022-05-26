@@ -22,12 +22,13 @@ const App = () => {
 		setText(data.slice(0, amount))
 	}
 	return (
-		<section className='container'>
+		<section className='section-center'>
 			<h3>Tired of boring ipsum?</h3>
-			<form className='form' onSubmit={handleSubmit}>
-				<label htmlFor='amount'>Paragraph : </label>
+			<form className='lorem-form' onSubmit={handleSubmit}>
+				<label htmlFor='amount'>Paragraphs : </label>
 				<input
 					type='number'
+					name='amount'
 					id='amount'
 					value={count}
 					onChange={handleChange}
