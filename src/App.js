@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './index.scss'
+import Text from './Component/Text/Text'
+import data from './db/data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	const [count, setCount] = useState('')
+	const [text, setText] = useState([])
+
+	const handleChange = (e) => {
+		console.log(e.target.value)
+		setCount(e.target.value)
+	}
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		let amount = parseInt(count)
+		if (count <= 0) {
+			amount = 1
+		}
+		if (count >= 24) {
+			amount = 24
+		}
+		setText(data.slice(0, amount))
+	}
+	return (
+		<section className='container'>
+			<h3>Tired of boring ipsum?</h3>
+			<form className='form' onSubmit={handleSubmit}>
+				<label htmlFor='amount'>Paragraph : </label>
+				<input
+					type='number'
+					id='amount'
+					value={count}
+					onChange={handleChange}
+				/>
+				<button className='btn'>Generate</button>
+			</form>
+			<Text text={text} />
+		</section>
+	)
 }
 
-export default App;
+export default App
