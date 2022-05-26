@@ -8,7 +8,6 @@ const App = () => {
 	const [text, setText] = useState([])
 
 	const handleChange = (e) => {
-		console.log(e.target.value)
 		setCount(e.target.value)
 	}
 	const handleSubmit = (e) => {
