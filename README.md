@@ -11,4 +11,4 @@ It is  part of my learning progress javascript and in particular [reactJs](https
 - [Lorem Ipsum](https://loremipsum.io/)
 ## Acknowledgements
 
-- [@john-smilga](https://github.com/john-smilga) - Created and taught a [reactjs course on Udemy](https://www.udemy.com/course/react-tutorial-and-projects-course) with corresponding projects. I cannot thank you enough, sir.
+- [@john-smilga](https://github.com/john-smilga) - Created and taught [reactjs course on Udemy](https://www.udemy.com/course/react-tutorial-and-projects-course) with corresponding projects. I cannot thank you enough, sir.
